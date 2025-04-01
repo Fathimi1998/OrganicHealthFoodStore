@@ -1,0 +1,365 @@
+﻿MANUAL TESTING PROJECT
+
+
+
+
+
+
+
+
+
+
+Submitted By
+Fathimi T
+SWT ML-S07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TEST PLAN DOCUMENT 
+FOR ORGANIC HEALTH FOOD STORE
+(https://organichealthfoodstore.pythonanywhere.com/products/thank_you/ )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTRODUCTION
+
+
+PURPOSE
+
+
+The purpose of the test plan for an Organic Health Food Store website is to outline the Testing Strategy, Scope and Activities required to validate the Functionality, Performance, user-friendly, and Reliability of the website. This document serves as a guide for the testing team to ensure that all features meet the quality standards and requirements specified by the Clients. By Systematically identifying and addressing defects, the testing process aims to deliver a high-quality product that follows end-user expectations.
+
+
+OBJECTIVES
+                
+* Ensure that all features of the Application work as intended.
+* Confirm that the application provides a smooth and intuitive user experience across various devices.
+* Ensure that the website works properly on various web browsers. 
+* Detect and address defects early in the SDLC cycle to reduce potential failures.
+
+
+
+
+SCOPE OF TESTING
+
+
+The Scope of testing for the Organic Health Food Store website includes the validation of functional and non-functional aspects of the application.The testing will focus on identifying and resolving issues to ensure the application meets quality standard and end-user requirements.
+
+
+In-Scope
+Functional Testing
+
+
+* Sign-Up
+* Sign-In
+* Product Searching
+* Product Filtering
+* Product catalog
+* Shopping Cart Checkout
+
+
+Non-functional Testing
+
+
+* UI Testing - Validation of user interface and responsiveness.
+* Performance Testing - Ensuring website speed under high user load.
+* Compatibility Testing - Chrome,Edges
+* Security Testing - Validating safe sign in and user data handling.
+
+
+
+
+Out-of-Scope
+
+
+* Automated Testing
+* Third-party Integrations
+* Internationalization/Localization Testing
+* Server side Testing
+
+
+
+
+TEST ITEMS
+
+
+* User Registration/Sign-Up
+* User Login/Sign-In
+* Product Catalog 
+* Product Searching
+* Product Filtering
+* Shopping Cart
+* Checkout
+
+
+
+
+
+
+
+
+TEST APPROACH
+
+
+TEST LEVELS
+
+
+* Unit Testing : For individual components(SignUp, Product filters).
+* Integration Testing : Ensure proper interaction between components(Shopping cart and Checkout).
+* System Testing : 
+
+
+TEST TYPES
+
+
+* Functional Testing: Test all features like search, cart, checkout.
+* Usability Testing : Ensure the app is intuitive and user-friendly.
+* Performance Testing : Test app speed and responsiveness.
+* Compatibility Testing : Ensure the app works across devices.
+
+
+
+
+ 
+
+
+
+
+
+
+TEST CRITERIA
+
+
+* ENTRY CRITERIA:
+
+
+   * Test environment setup is complete and available.
+   * Test data are reviewed and ready for execution.
+   * Application is feature complete, passes unit testing.
+
+
+* EXIT CRITERIA:
+
+
+   * All critical defects detected are resolved.
+   * Test cases have been executed, the issues are documented for follow-up.
+   * Test Report is created and reviewed.
+
+
+ TEST DELIVERABLES
+
+
+* Test Plan Document
+* Test Case Document
+* Test Data
+* Test Execution Report
+* Defect Report.
+TESTING SCHEDULE
+
+
+        The schedule defines key activities test case development, test execution, and test closure and timeline for when the different testing activities will take place.
+
+
+
+
+Activity
+	Start Date
+	End Date
+	Requirement Analysis
+	08/10/2024
+	09/10/2024
+	Test Case Creation
+	10/11/2024
+	15/11/2024
+	Test Environment Setup
+	16/11/2024
+	17/11/2024
+	Test Execution
+	18/11/2024
+	22/11/2024
+	Defect Reporting
+	23/11/2024
+	26/11/2024
+	Test Closure
+	27/11/2024
+	27/11/2024
+	
+
+
+
+
+
+
+
+
+
+RISKS AND MITIGATION
+
+
+
+
+RISKS
+	MITIGATION
+	Delay in environment setup
+	Use virtual environments
+	Insufficient Test data
+	Prepare a comprehensive test data set early in the process
+	Device Compatibility issues
+	Perform cross-device testing early in the process using a variety of devices
+	
+
+
+
+TEST ENVIRONMENT
+
+
+URL:
+https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+
+
+Browsers : 
+         Google chrome
+Microsoft Edge
+Mozilla Firefox
+
+
+Devices : 
+Desktop
+Mobile device
+
+
+Operating System : 
+Windows 10
+Android(latest version)
+
+
+Network : 
+Stable Internet Connection
+
+
+
+
+Hardware Requirement : 
+        Minimum : intel i3, 4GB RAM, SSD
+        Recommended : intel i5,8GB RAM, SSD
+
+
+
+
+TEST CASE DESIGN
+
+
+Online Organic Food Store --Manual Testing PJT
+
+
+
+
+
+
+TEST EXECUTION REPORT
+
+
+Online Organic Food Store --Manual Testing PJT
+
+
+Test Summary : 
+
+
+* Total Test cases executed : 116
+* Total Bugs Reported : 52
+* Passed Test Case : 64
+* Failed Test Cases : 52
+* Pass Rate : 51.17%
+
+
+Over All Status : FAILURE
+
+
+
+
+
+
+
+
+DEFECT REPORT
+
+
+Online Organic Food Store --Manual Testing PJT
+
+
+Bug Statistics
+
+
+* Severity : 
+
+
+   * Critical : 23
+   * Major : 27
+   * Moderate : 02
+   * Minor : 0
+* Priority : 
+
+
+   * High : 46
+   * Medium : 06
+   * Low : 0
+
+
+
+
+SUGGESTIONS
+
+
+Online Organic Food Store --Manual Testing PJT
+
+
+CONCLUSION
+
+
+By adhering to this test plan and executing the outlined tests, we can ensure that the Organic Health Food Store application is not full functional and Secure. 46 High priority and 23 Critical Severe bugs indicate that the application doesn’t meet all the specified requirements of the user, badly affects user experience and System Reliability. Therefore the Application Still needs to go for improvement. The application is not okay to go live. It is recommended to resolve the detected bugs and ensure a smooth, high-Quality and user-friendly application before release.
