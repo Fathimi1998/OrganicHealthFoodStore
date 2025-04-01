@@ -1,0 +1,113 @@
+,,,,,,,,
+,,,,,,,,
+Project Name: ORGANIC HEALTH FOOD STORE        ,,,,,,,,
+Module Name: Product Filtering,,,,,,,,
+Created By: Fathimi,,,,,,,,
+Reviewed By: Anas Hassan,,,,,,,,
+Reviewed Date : 12/11/2024,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+TEST CASE ID,"TEST SCENARIO 
+DESCRIPTION",PRECONDITION,TEST STEPS,TEST DATA,EXPECTED RESULT,ACTUAL RESULT,STATUS,BUG ID
+TC_061,"Verify that several Options are visible on
+ Filter Functionality and Clickable.","1. The User is on the Product List page
+2. Filter contain filter functionality.","1. Navigate to the product list page.
+2. Search for different filters.
+3. Verify each filters is accessible by clicking it.",,"The Filter function should contain several filters like 
+Category, Price range, rating etc. and should be Clickable.","The Filter function contain several filters like 
+Category, Price range, rating etc. and is Clickable.",PASS,
+TC_062,"Verify that the user can filter products by Category 
+(Fruits, Vegetables, nuts).","1.The User is on the Product list page..
+2. Products with various categories 
+(Fruits, Vegetables,)are available.","1. Navigate to the Product list page.
+2. Locate the Category Filter in the filter section.
+3. Select the category filter.
+4. Verify that only vegitables are displayed in the product list.","Category Filter : Fruits , vegetables","Products belonging to the Vegetables category should be displayed, 
+and all other categories should be not visisble from the list.","Some products from other categories (Fruits, Snacks) are still 
+visible alongside Vegetables.",FAIL,BUG_24
+TC_063,"Verify that filtering products by Price Range 
+correctly displays products in the range.","1. The user is on  Product list page.
+2. Products with various price points are available.","1. Navigate to the Product list page.
+2. Locate the Price Filter section.
+3. Select the price range.
+4. Verify that only products within the price range are displayed.",Price Range : $150.0 -$200.0,"Only products with in the Price Range($150.0 -$200.0) 
+should be displayed","Products above the Price Range is dispalyed along 
+with the products range $150.0 -$200.0",FAIL,BUG_25
+TC_064,"Verify that filtering products by Brand
+correctly displays products in the range.
+(Best Farm, Private Label, Trimurti Kings)","1. The user is on  Product list page.
+2. Products with various Brand are available.","1. Navigate to the Product list page.
+2. Locate the Price Filter section.
+3. Select the Brand.
+4. Verify that only products within the price range are displayed.",Brand : Best Farm,"Only products from Brand Best Farm should be shown, and all 
+other brands should be excluded.","Products from Brand Best Farm is displayed and all 
+other is excluded.",PASS,
+TC_065,"Verify that filtering products by multiple filters 
+applied together works properly.","1. The user is on  Product list page.
+2. Multiple filters should be available.","1. Navigate to the Product list page.
+2. Apply Category filter.
+3. Apply price range filter.
+4. Apply Brand filter.
+5. Verify that products meeting all selected criteria are displayed.","Category: Vegetables, 
+Price: $150-$250, 
+Brand: Brand C","Only products that are Vegetables, priced $0-$10, and from Brand C 
+should be displayed.","products outside the selected category, 
+price range, 
+or brand are still visible.",FAIL,BUG_26
+TC_066,"Verify that filtering products by ""Rating"" displays 
+correctly Rating products.","1. The user is on  Product list page.
+2. Multiple Ratings should be available.","1. Navigate to the Product list page.
+2. Select Rating filter.
+3. Select a rating range.
+5. Verify that products meeting all selected Ratings are displayed.","
+Ratings : 4 stars and above","
+ products with a rating of 4 stars or higher should be displayed.","Products with 
+lower ratings (below 4 stars) are still visible",FAIL,BUG_27
+TC_067,"Verify that filtering products by ""Availability"" function/ 
+ 
+","1. The user is on  Product list page.
+2. Availability filter(Show all, Show available, 
+show unavailabe)should be available.","1. Navigate to the Product list page.
+2. Select Availability filter.
+3. Select a Show Availabe.
+5. Verify that products meeting all selected Ratings are displayed.","
+Availability : Show available",Only products that are in stock should be shown,Products that are out of stock are still displayed.,FAIL,BUG_28
+TC_068,"Verify the performance of the filter functionality
+ when there are a large number of items
+(Access time 2-3 sec).
+","1. The User is on the Product List page
+2. Filter contain filter functionality.","1. Navigate to the page with a large number of records.
+2. Apply a filter.
+3. Measure the time taken for the results to load.","Price Range: $0 - $100.
+Availability: In Stock.",The filter should apply within an acceptable time frame (2-3 seconds).,It takes above 5 sec to load the Filter result page.,FAIL,BUG_29
+TC_069,"Verify that selecting the ""New Arrivals"" filter 
+shows only recently added products.","1. The User is on the Product List page
+2. Filter contain filter functionality.","1. Navigate to the ""Filters"" section.
+2. Select the ""New Arrivals"" filter.
+3. Click ""Apply Filter.""",Filter : New Arrivals,"Only products marked as ""New Arrivals"" should be displayed."," Old Products is displayed along 
+with the New Arrival products.",FAIL,BUG_30
+TC_070,Verify that filters persist after the page is reloaded.,1. Filters have been applied to the product list.,"1. Navigate to the ""Filters"" section .
+2. Apply one or more filters.
+3. Refresh the page or navigate to a different page and then return.
+4. Verify that the filter applied exist or not.",Filter : New Arrivals,The filters should remain applied after the page reloads.,"The applied Filter to the catalog are still active and 
+visible after refresing or reloading.",PASS,
+TC_071,"Verify that the ""Clear Filters"" button in Filter 
+functionality is visible and accessible.",1. Two or more filter have been applied,"1. Navigate to the ""Filters"" section.
+2. Check Clear Filter button is visible.
+3. Click the Clear all button.
+4. Verify that the button is accessible, that will clear 
+all the filters applied and go back to product list page.","Price Range: $0 - $100.
+Availability: In Stock","The ""Clear Filter"" button should be visible and accessible and 
+Should show the product list page when  clearing all the filters. ","The Clear Filter option is visible in Filter 
+functionality but not accessible.",FAIL,BUG_31
+TC_072,"To ensure that the filter functionality works as expected 
+on different devices(Mobile phone, desktop).","1. The User is on the Product List page
+2. Filter contain filter functionality.","1. Open the page on a mobile device, desktop.
+2. Verify fo the layout, filters displayed.
+3. Navigate to ""Filters"" section.
+4. Apply a filter , multiple filters.
+5. Verify that the filter functionality works correctly
+ and the results are displayed properly.
+",Filter function,The filter works seamlessly across all devices.,"In moble phone layout breaks,  Filter function is not 
+properly working sometime. ",FAIL,BUG_32

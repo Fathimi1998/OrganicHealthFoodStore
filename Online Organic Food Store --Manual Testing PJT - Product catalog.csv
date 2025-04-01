@@ -1,0 +1,128 @@
+,,,,,,,,
+,,,,,,,,
+Project Name: ORGANIC HEALTH FOOD STORE        ,,,,,,,,
+Module Name: Product Catalog,,,,,,,,
+Created By: Fathimi,,,,,,,,
+Reviewed By: Anas Hassan,,,,,,,,
+Reviewed Date : 10/11/2024,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+TEST CASE ID,"TEST SCENARIO 
+DESCRIPTION",PRECONDITION,TEST STEPS,TEST DATA,EXPECTED RESULT,ACTUAL RESULT,STATUS,BUG ID
+TC_037,"Verify that a list of products is displayed on the product catalog
+with necessary details(image, price,title and add to cart button).","1. User is on the products catalog page
+ and logged in.","1. Navigate to the product catalog.
+2. Verify that a list of products is displayed.
+3. Check that each product has an image, title, price, 
+and ""Add to Cart"" button.",List of food products,"A list of products should be displayed, each with an
+ image, title, price, and ""Add to Cart"" button.","A list of products with images, 
+name, price and add to cart is displayed.",PASS,
+TC_038,"Verify that product titles are displayed correctly under product
+ images and are readable.","1. User is on the products catalog page
+ and logged in.","1. Navigate to the home page.
+2. Focus on any product on the catalog.
+3.Verify that the product title is displayed properly 
+under the product image.
+4. Check the font size, color and style are okay to read.",product name : Carrot,"Product names should be clearly displayed, 
+in readable size and style, under each product image.","Products names are not clearly visible, not readable 
+with the font size
+under each product image.",FAIL,BUG_08
+TC_039,"To verify that product prices are displayed correctly 
+with proper formatting.","1. User is on the products catalog page
+ and logged in.","1. Navigate to the home page.
+2. Identify any product on the catalog.
+3.Verify that the product price is displayed properly 
+under the product image.
+4. Check the price is formatted correctly with 
+decimal point and currancy symbol. ",Price : $100.0,"The price should be displayed under the product title, 
+correctly formatted.","The price is correctly formatted with 
+decimal numbers
+ and symbol, displayed under the product.",PASS,
+TC_040,"Verify that product images are displayed clearly
+ without distortion and are clickable.","1. User is on the products catalog page
+ and logged in.","1. Navigate to the home page.
+2. Identify any product on the product catalog.
+3.Verify that the product image is displayed properly.
+4. Check the product image is Clickable. ",Product image : carrot.jpg," Product image should be clear, and should be clickable, 
+leading to the product's detail page.",Product image is not that much clear and not accessible.,FAIL,BUG_09
+TC_041,Verify Cart is present the product listing page and clickable.,"1. User is on the products catalog page
+ and logged in.","1. Navigate to the product catalog page.
+2. Verify the Cart field is present.
+3.Locate the Cart field.
+4. Check the Cart is Clickable and leads to Cart page.. ",,"The Cart should be present and should leads
+ to the Cart page when clicked.","The Cart is present as ""My Cart"", 
+clickable leads to my cart page.",PASS,
+TC_042,"Verify that the Add to Cart button adds the product to the cart 
+and updates the cart icon.","1. User is on the products catalog page
+ and logged in.","1. Navigate to the product catalog page.
+2. Identify any product.
+3. Click on the Add to Cart button.
+4. Verify the product is added to the Cart.
+5. Check the Cart icon reflects the number of items.",Product : Onions,"The product should be successfully added to the cart, 
+and the cart icon should update ","The product successfully added to the cart and
+ cart icon is updated.",PASS,
+TC_043,"Verify Wish list icon is present the product catalog page
+ and clickable.","1. User is on the products catalog page
+ and logged in.","1. Navigate to the product catalog.
+2. Verify the wishlist field is present.
+3.Locate the field. ",,"The product page should contain wishlist icon 
+and must list the wishlisted products when clicked.",The page doesnt show any wishlist icon.,FAIL,BUG_10
+TC_044,"Verify that pagination works correctly and 
+allows navigation through multiple pages of products.","1. User is on the products catalog page with
+ multiple product listings.","1. Navigate to the catalog with multiple products listed.
+2. Verify the presence of pagination links (e.g., ""Next"", ""Previous"").
+3. Click on the ""Next"" button and verify 
+that next page is loaded with products.
+4. Click on the Previous button and check that it 
+ go  to previous product page.",,"Pagination should allow users to 
+navigate through different product pages.",Next button is not Clickable to load next product page.,FAIL,BUG_11
+TC_045,"Verify that the search functionality is visible and 
+works correctly, listout the products in 5 second.","1. User is on the products catalog page
+ and logged in.","1. Navigate to the product catalog.
+2. Verify Search bar is visible.
+3. Enter any search term (eg Garlic).
+4. Click on the Search button or press enter.
+5.Verify the how quickly search bar is working(with in 5sec)",Product : Garlic,"Search Functionality should be visible and
+ the search should return a list of products with in 5 sec","Search functionality is dispalyed but search takes too 
+much time to load the result with list of products.",FAIL,BUG_12
+TC_046,"Verify that the filter options are visible and contain filters, 
+working properly(Category, Price range).","1. User is on the products catalog page
+ and logged in.
+2. Have filter options.","1. Navigate to the product catalog page.
+2. Search for Filter option.
+3. Verify Filter option contaim some filters like  
+Category, price range, Rating.
+4. select any Category 
+5. Verify that page loads the selected category based food products",Category : Fruits,"Filter options (Category, Price, Brand, Rating)
+ should be clearly visible,
+ accessible and list out the products based on the category.",Filter options are visible clearly and accessible.,PASS,
+TC_047,Verify the presence of the Logo on the catalog page.,"1. User is on the products catalog page
+ and logged in.","1. Navigate to the product catalog.
+2.Verify that the logo is visible on te top left of the page.",,The company logo should be visible on the top left of the page.,The logo is missing on the top left of the page.,FAIL,BUG_13
+TC_048,"To verify that the Footer links (About us, Contact) 
+are visible and accsessible","1. User is on the products catalog page
+ and logged in.","1. Navigate to the product catalog.
+2.Verify that the footer links are visible.
+3. Clik on each footer links.
+4. Check that the links are accessible.",,"The page should show the footer links 
+correctly and mus have access.","The page doesnt show any footer links
+ like About us, Contact .",FAIL,BUG_14
+TC_049,"Verify that the Logout option is displayed and 
+working properly.","1. User is on the products catalog page
+ and logged in.","1. Navigate to the Product catalog page.
+2. Check for the Logout option.
+3. Clock on the Logout button.
+4. Verify that the uer redirects to the home page.
+",,"The page should show the Logout link or symbol and 
+should redirected to the home page when clicked the logout button.","The Logout button is visible and redirected to
+ the homepage when clicked the button.",PASS,
+TC_050,Verify the page's responsiveness across mobile devices,"1. User is on the products catalog page
+ and logged in.","1. Open the Product catalog on mobile devices.
+2. Verify that the product categories, images, and other 
+elements adjust properly to fit the screen.
+3. Check that the ""Add to Cart"" button and other 
+actions are touch-friendly.",,"The product page should load properly on mobile devices.
+All elements should be responsive and easily navigable.
+The buttons and links are large enough to be easily clicked.","The product loaded successfully. 
+But the Cart icon ,Logout button some elements are 
+missing and it is only visible in desktop mode.",FAIL,BUG_15

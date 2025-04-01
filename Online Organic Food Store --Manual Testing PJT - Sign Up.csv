@@ -1,0 +1,248 @@
+,,,TEST CASE DOCUMENT,,,,,
+,,,,,,,,
+Project Name: ORGANIC HEALTH FOOD STORE        ,,,,,,,,
+Module Name: Sign Up,,,,,,,,
+Created By: Fathimi,,,,,,,,
+Reviewed By: Anas Hassan,,,,,,,,
+Reviewed Date : 10/11/2024,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+TEST CASE ID,"TEST SCENARIO 
+DESCRIPTION",PRECONDITION,TEST STEPS,TEST DATA,EXPECTED RESULT,ACTUAL RESULT,STATUS,BUG ID
+TC_001,"Verify that the Sign-Up page loads correctly with all 
+necessary elements and loads with in 3 seconds.",User is on the Sign-Up page.,"1. Open the Sign-Up page URL.
+2. Verify Sign Up title, First name, Last name, 
+Username, Email, Password, Confirm password, 
+Sign Up button andSign in link.
+3. Verify the page loads with in 3 sec.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"All elements should be visible, properly aligned, and functional. 
+The page should load without any errors.","All the elements are properly visible, aligned and 
+page loaded without any errors.",PASS,
+TC_002,"Verify that the correct placeholder text is displayed 
+in the input fields for First Name, Last Name, Username, 
+Email, Password, and Confirm Password.",User is on the Sign-Up page.,"1. Navigate to the Sign Up page.
+2. Focus on Place holder text of Firstname input field.
+3. Focus on place holder text of Last name input filed.
+4. Focus on place holder texts of input fields Username, 
+Email, Password, Confirm Password.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"The placeholder text in each field should be 
+correctly displayed.","The correct placeholder text is displayed 
+in the input fields for First Name, Last Name, Username, 
+Email, Password, and Confirm Password.",PASS,
+TC_003,"To check that the Sign-Up button is visible, 
+correctly labeled, and aligned properly.",User is on the Sign-Up page.,"1. Verify that the Sign-Up button is visible on the page.
+2.  Check that the button label is ""Sign Up"".
+3. Verify that the button is aligned correctly.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"The Sign-Up button should be visible, correctly labeled, and 
+centered or aligned with the other form fields.","The Sign-Up button is visible, 
+correctly labeled, and aligned properly.",PASS,
+TC_004,"Verify that the Sign-In link is visible and clickable, 
+and redirects to the Sign-In page.",User is on the Sign-Up page.,"1. Locate the Sign-In link.
+2. Verify that the link is visible and clickable.
+3. Verify that the user redirected to Sign in page when clicked.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"The Sign-In link should be visible, clickable, and should redirect
+ the user to the Sign-In page when clicked.","The Sign in link is visible, clickable 
+and redirects to the Sign in page.",PASS,
+TC_005,"Verify for Successfull Registration message Show up
+after Sign up with valid data.",User is on the Sign-Up page.,"1. Navigate to the ""Sign up"" page.
+2. Enter the required information  such as First name, 
+Last name and User name.
+3. Enter a valid email address.
+4. Enter a valid password.
+5. Confirm the password.
+6. Click on the ""Sign Up"" button.
+7. Verify for the message.","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : Archana
+Last name : Vivek
+Username : Archana
+Email : archanaachu@gmail.com
+Password : archana@123","Registration completed successfully or 
+a welcome message should be displayed.","No Successfull message is appeared, 
+directly leads to Sign in page",FAIL,BUG_01
+TC_006,"Ensure that Password visibility by marking the 
+Show password checkbox and check it works properly.
+",User is on the Sign-Up page.,"1. Enter the Password and confirm the password.
+2. Mark the Show Password field to check 
+the entered passord is visible.
+3. Unmark the Show Password field to check
+ the entered password is hidden.","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Password : pwdpwd@123","The show password checkbox should be visible and clickable,
+marking and Unmarking should result 
+the password visible and hidden","The Password visibility by marking the 
+Show password checkbox worked properly.
+",PASS,
+TC_007,"To verify that the user can 
+successfully sign up with valid details.","1. The user is on the ""Sign up"" page.
+2.The user must not be registered.
+3.The user must have an Email and Password.","1. Navigate to the ""Sign up"" page.
+2. Enter the required information  such as First name, 
+Last name and User name.
+3. Enter a valid email address.
+4. Enter a valid password.
+5. Confirm the password.
+6. Click on the ""Sign Up"" button.","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : Archana
+Last name : Vivek
+Username : Archana
+Email : archanaachu@gmail.com
+Password : archana@123","The user is successfully signed up and 
+redirected to their home page or dash board.","The user is successfully signed up and 
+redirected to their ""sign in"" page.",PASS,
+TC_008,"Verify Sign up page when the user tries 
+to sign up with missing Firstname.","1. The user is on the ""Sign up"" page.
+","1. Navigate to the ""Sign up"" page.
+2. Leave the first name field blank.
+3. Enter valid data for Last name, user name, 
+email address, password.
+4. Confirm the password. 
+5. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : 
+Last name : vishnu
+Username : adca
+Email : adca@gmail.com
+Password : adca@123","Error messages should appear for the First name field, such as 
+""Please fill out this field"".","Error message is displayed as ""Please fill out this field"".",PASS,
+TC_009,"Verify Sign up page when the user tries 
+to sign up with missing Email and password.","1. The user is on the ""Sign up"" page.
+2.The user must not be registered.
+","1. Navigate to the ""Sign up"" page.
+2. Enter the first name, Last name, username.
+3. Leave Email and password fields blank. 
+4. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : Abc
+Last name : def
+Username : abcd
+Email : 
+Password : ","Error messages should appear for the Email and password field,
+ such as ""Please fill out this field"".","Error message is displayed as ""Please fill out this field"".",PASS,
+TC_010,"To verify that the user cann't sign up with
+an invalid Email format. 
+","1. The user is on the ""Sign up"" page.
+2.The user must not be registered.
+","1. Navigate to the ""Sign up"" page.
+2. Enter the required information  such as First name, 
+Last name and User name.
+3. Enter a Invalid email address.
+4. Enter a valid password.
+5. Confirm the password. 
+6. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : Abhi
+Last name : Raj
+Username : Abhi
+Email : abhiraj@co
+Password : abhi@123","An error message should be appear such as 
+""please enter a valid Email address"".","The system allowed the invalid email and proceeded 
+to the sign in page.",FAIL,BUG_02
+TC_011,"To verify that the user cann't sign up the
+ page if the password and confirm password 
+fields mismatched. ","1. The user is on the ""Sign up"" page.
+2.The user must not be registered.
+","1. Navigate to the ""Sign up"" page.
+2. Enter the required information  such as First name, 
+Last name and User name.
+3. Enter a valid email address.
+4. Enter a valid password.
+5. Enter a different password in the ""confirm password"" field. 
+6. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : Abc
+Last name : Xyz
+Username : Abc
+Email : abcxyz@gmail.com
+Password : abc@123
+Confirm password : abc@321","An error message should appear, such as 
+""Passwords do not match.""","The system shows an error message ""Password not matching"", 
+and prevented sign up.",PASS,
+TC_012,"Verify Sign-Up with Already Registered 
+Email Address.","1. The user is on the ""Sign up"" page.
+2. The user have a registered Email address.
+","1. Navigate to the ""Sign up"" page.
+2. Enter the required information  such as First name, 
+Last name and User name.
+3. Enter an already registered email address.
+4. Enter a valid password.
+5. Enter same password in the ""confirm password"" field. 
+6. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : John
+Last name : Son
+Username : John
+Email : abcxyz@gmail.com
+Password : john@123
+Confirm password : john@123","An error message should appear, such as 
+""This email is already registered.""","The system shows an error message ""Email address is 
+already taken"", and prevented sign up.",PASS,
+TC_013,"Verify Sign-Up with Already Registered 
+Username.","1. The user is on the ""Sign up"" page.
+2. The user have a registered Username.
+","1. Navigate to the ""Sign up"" page.
+2. Enter a registered Username.
+3. Enter a valid email address.
+4. Enter a valid password.
+5. Enter same password in the ""confirm password"" field. 
+6. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Username : Abc
+Email : testuser@gmail.com
+Password : test@123","An error message should appear, such as 
+""This Username is already registered.""","The system shows an error message ""Username is 
+already taken"", and prevented sign up.",PASS,
+TC_014,"Verify Sign up with invalid username
+(special characters or spaces).","1. The user is on the ""Sign up"" page.
+2.The user must not be registered.
+","1. Navigate to the ""Sign up"" page.
+2. Enter valid First name, Last name.
+3. Enter some special characters as username.
+4. Enter a valid email address.
+5. Enter a valid password.
+6. Enter same password in the ""confirm password"" field. 
+7. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Full name : Joe
+Last name : Sonu
+Username : @#!
+Email : fghjk@gmail.com
+Password : joe@123
+Confirm password : joe@123","An error message should appear, such as 
+""Username can only contain letters, numbers, and underscores"".","No error message is appeared, redirected to Sign in page.",FAIL,BUG_03
+TC_015,Verify Sign-Up with a password that is too short.,"1. The user is on the ""Sign up"" page.
+2.The user must not be registered.
+","1. Navigate to the ""Sign up"" page.
+2. Enter a valid Username.
+3. Enter a valid email address.
+4. Enter a too short password.
+5. Enter same password in the ""confirm password"" field. 
+6. Click on the ""Sign Up"" button.
+","
+https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Username : Abu
+Email : abuuser@gmail.com
+Password : 2a","An error message should appear, such as 
+""Password must be atleast 6 characters long"".","No error message is appeared, redirected to Sign in page.",FAIL,BUG_04
+TC_016,"Verify Password complexity requirements
+ in Sign up.","1. The user is on the ""Sign up"" page.
+2.The user must not be registered.
+","1. Navigate to the ""Sign up"" page.
+2. Enter valid First name, Last name and Username.
+3. Enter a valid email address.
+4. Enter a weak password.
+5. Enter same password in the ""confirm password"" field. 
+6. Click on the ""Sign Up"" button.
+","https://organichealthfoodstore.pythonanywhere.com/products/thank_you/
+Username : Abu
+Email : abuuser@gmail.com
+Password : hipassword
+Confirm Password : hipassword","An error message should appear, such as 
+""Password must contain atleast one number, 
+one special character"".","No error message is appeared, redirected to Sign in page.",FAIL,BUG_05
+TC_017,"To verify that the Sign-Up page is responsive 
+and displays correctly on various devices
+(Desktop, mobile devices).",User is on the Sign-Up page.,"1. Open the Sign-Up page on a desktop screen.
+2. Verify the elements are displayed properly and are readable.
+3. Open the Sign-Up page on a mobile device and
+ verify that the page layout adjusts for smaller screens.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"The Sign-Up page should be responsive, and all elements 
+(form fields, buttons, links) should be visible and readable 
+on desktop and mobile devices and layout 
+are adjusted based on the screen sixze.","The Sign-Up page is responsive 
+and displays correctly on various devices
+(Desktop, mobile devices).",PASS,

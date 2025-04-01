@@ -1,0 +1,211 @@
+,,,,,,,,
+,,,,,,,,
+Project Name: ORGANIC HEALTH FOOD STORE        ,,,,,,,,
+Module Name: Shopping Cart,,,,,,,,
+Created By: Fathimi,,,,,,,,
+Reviewed By: Anas Hassan,,,,,,,,
+Reviewed Date : 13/11/2024,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+TEST CASE ID,"TEST SCENARIO 
+DESCRIPTION",PRECONDITION,TEST STEPS,TEST DATA,EXPECTED RESULT,ACTUAL RESULT,STATUS,BUG ID
+TC_073,"Verify that the cart page is correctly displayed with all UI 
+elements like product name, quantity, price, and total.","
+1. User is logged into the website.
+2. User has added at least one product to the shopping cart.","1. Navigate to the product catalog.
+2. select a product and quantity.
+3. Click Add to Cart.
+4. Navigate to the shopping cart page.
+5. Verify that the product name, quantity, price, and
+ total are displayed correctly.","product : Garlic
+Quantity : 2 
+price :100
+Price per product : 200","The cart page should display:
+Product Name: ""Garlic""
+Quantity: ""2""
+Price : ""$100.0""
+Total: ""$200.00""","The cart page correctly displays the product name, 
+quantity, price, and price per product (total).",PASS,
+TC_074,"Verify that the ""Empty Cart"" button is 
+visible and functional when the cart is empty.",1. User is logged in and has emptied the shopping cart.,"1. Navigate to the shopping cart page.
+2. Ensure the cart is empty.
+3. Verify that the ""Empty Cart"" button is 
+visible and clickable.",,"The  Empty Cart button should be visible 
+and clickable when the cart is empty.","The  Empty Cart button is displayed and 
+functional when the cart is empty.",PASS,
+TC_075,"Verify that the ""Remove"" button is displayed next to each product
+ in the cart and can be clicked.","1. User is logged in and has added at least 
+one product to the shopping cart.","1. Navigate to the product catalog.
+2. select a product and quantity.
+3. Click Add to Cart.
+4. Navigate to the shopping cart page.
+5. Verify that a ""Remove"" button is visible next
+ to each product and Clickable.","Product : potato
+Quantity : 2
+Price : $ 150.0 each","The ""Remove"" button should be visible next to each product, 
+and clicking it should remove the product from the cart.",The Remove button is not visible next to product.,FAIL,BUG_33
+TC_076,"Verify that the ""Update Cart"" button is visible or not.","1. User is logged in and has added at least 
+one product to the shopping cart.","1. Add 2 Potato to the cart.
+2. Navigate to the shopping cart page 
+3. Check for ""Update Cart"" button.","Product : potato
+Quantity : 2
+Price : $ 150.0 each","The ""Update Cart"" button should be visible and accessible","The ""Update Cart"" button is hidden or cut off 
+and cannot be accessed ",FAIL,BUG_34
+TC_077,Verify that a product can be successfully added to the shopping cart.,"1. User is logged into the website. 
+2. User is on product catalog page.","1. Navigate to the product catalog.
+2. Choose the product.
+3. Select quantity.
+4. Click ""Add to Cart"".","Product : apple
+quantity : 1","The product "" Apple"" is added to the shopping cart. 
+The cart icon should update with 1 item.","The product Apple is added to the Cart and 
+cart icon is updated to 1",PASS,
+TC_078,Verify that multiple products can be added to the cart.,"1. User is logged into the website. 
+2. User is on product catalog page.","1. Navigate to the product catalog.
+2. Choose the product. 1 and select quantity. then Add to cart.
+3. Select product 2 and quantity then Add to cart.
+","product 1 : Garlic
+Quantity : 2 
+price :100
+Price per product : 200
+product 2 : orange
+Quantity : 2 
+price :200
+Price per product : 400","The Cart should contain 2 Garlic  and 
+2 orange with a total of 4 items.","The Cart contain 2 Garlic  and 
+2 orange with a total of 4 items.",PASS,
+TC_079,"Verify that Total Price of multiple products is displayed 
+on top or bottom of the Shopping cart page","1. User is logged in and has added two or more
+ products to the shopping cart.","1. Navigate to the product catalog.
+2. Choose the product. 1 and select quantity. then Add to cart.
+3. Select product 2 and quantity then Add to cart.
+","product 1 : Garlic
+Quantity : 2 
+price :100
+Price per product : 200
+product 2 : orange
+Quantity : 2 
+price :200
+Price per product : 400
+
+","The total price for 2kg potato and 2kg orange should be dispalyed, 
+that is total price 600.0rs should be displayed","The Total price 600.0rs is not displayed on the top
+ or bottom of the cart page.",FAIL,BUG_35
+TC_080,Test the functionality of removing an item from the shopping cart.,"1. User is logged in and has added at least 
+one product to the shopping cart.","1. Add 2 Potato to the cart.
+2. Navigate to the shopping cart page.
+3. click on Remove","Product : potato
+Quantity : 2
+Price : $ 150.0 each",The item should be removed from the cart.,Removing an item is not possible.,FAIL,BUG_36
+TC_081,Test that the cart persists after user logs out and logs back in.,"1. User is logged in and has added at least 
+one product to the shopping cart.","1. Add ""potato"" and ""garlic"" to the cart.
+2. Log out.
+3. Log back in.
+4. Go to the cart page.","product 1 : potao
+product 2: garlic",The cart should contain the items even after logout and login.,The cart doesnot contain the added items after logged in,FAIL,BUG_37
+TC_082,Verify that the shopping cart is empty after successful checkout.,"1. User is logged in and has added at least 
+one product to the shopping cart.","1. Add ""garlic"" to the cart.
+2. Proceed to checkout and complete payment.
+3. Go to the cart page.",product : garlic,The cart should be empty after successful checkout.,The cart was empty after completing the checkout.,PASS,
+TC_083,"Verify that the cart page layout breaks on mobile devices
+ due to improper responsiveness.",1. User has added products to the shopping cart.,"1. Add 1 Grape to the cart.
+2. Open the cart on a mobile device (e.g., smartphone).
+3. Verify the cart layout on mobile.","product : grape
+quantity :1","The cart page should be responsive, with elements 
+adjusting to the mobile screen size.","The cart page breaks and elements overlap or 
+are cut off on mobile devices.",FAIL,BUG_38
+TC_084,"Verify the website can handle adding a large number of products 
+to the cart failure.",1. The user is logged in,"1. Navigate to the product catalog page.
+2. Add 100 organic products to the cart
+ (add same or different products).
+3. Observe time taken for each product addition and total 
+time for all products.
+4. Observe if website slows down.
+ 5. Verify that the cart icon and cart summary
+ show the correct number of items.","100 products
+(orange(5), 
+garlic(2), 
+mango(5)etc)","The cart should handle the addition of 100 products 
+without performance degradation.
+ Cart icon should reflect 100 items.
+Time taken for each addition should be under 5 seconds.","Website performance degrades significantly  and 
+cart shows incorrect number of products.",FAIL,BUG_39
+TC_085,"Verify that the ""Apply Coupon"" field is visible and accessible 
+on the cart page.","1. The user is logged in.
+2. User has added products to the cart and is on the cart page.","1. Navigate to the shopping cart page.
+2. Verify that the ""Apply Coupon"" or "" Coupon Code"" 
+input field is visible on the page.",," The ""Apply Coupon"" field should visible on the cart page, 
+and  that users can input a coupon code.",Apply Coupon code is visible and accessible for input.,PASS,
+TC_086,"Verify that the coupon code input field accepts only alphanumeric characters 
+and displays an ""error message"" if the input is invalid.","1. The user is logged in.
+2. User has added products to the cart and is on the cart page.","1. Navigate to the shopping cart page.
+2. Click on the ""Enter Coupon Code"" field.
+3. Enter an invalid coupon code, such as ""CODE!"".
+4. Click on ""Apply coupon"" button.",coupon code : CODE!,"The coupon code input should only accept alphanumeric characters.
+If an invalid code is entered, an error message should appear
+ indicating the coupon code format is incorrect.","The input field accepts only alphanumeric characters.
+An error message ""Invalid coupon code "" is displayed.",PASS,
+TC_087,"Verify that a ""success message ""is displayed when a valid coupon code 
+is successfully applied.","1. The user is logged in.
+2. User has added products to the cart and is on the cart page.","1. Navigate to the shopping cart page.
+2. Click on the ""Enter Coupon Code"" field.
+3. Enter an invalid coupon code, such as ""SAVE 10"".
+4. Click on ""Apply coupon"" button.",coupon code : SAVE10,"A Successfull message should be displayed like 
+"" Coupon Applied successfully"".",No success message appears after applying the coupon.,FAIL,BUG_40
+TC_088,Verify that an error message is displayed when an invalid coupon code is entered.,"1. The user is logged in.
+2. User has added products to the cart and is on the cart page.","1. Navigate to the shopping cart page.
+2. Click on the ""Enter Coupon Code"" field.
+3. Enter an invalid coupon code, such as ""INVALID"".
+4. Click on ""Apply coupon"" button.",coupon code : INVALID,"If the coupon code is invalid, an error message should appear on the screen.
+ The error message should be 
+clear and in different color, such as ""Coupon code is invalid"" ","An error message is displayed clearly "" coupon code is not valid"".
+ The error message is styled appropriately in red text, clear font.",PASS,
+TC_089,"Verify that the applied coupon code is displayed correctly in the 
+cart summary section after it is applied.","1. The user is logged in.
+2. User has added products to the cart and is on the cart page.","1. Navigate to the shopping cart page.
+2. Apply a valid coupon code.
+3. Scroll down to the cart summary section.",coupon code : SAVE10,"The coupon code should displayed correctly in the cart summary section 
+along with the discount applied.
+",The coupon code does not appear in the cart summary.,FAIL,BUG_41
+TC_090,Verify that the coupon code input field can be cleared after entering a code.,"1. The user is logged in.
+2. User has added products to the cart and is on the cart page.","1. Navigate to the shopping cart page.
+2. Enter a coupon code  in the coupon code field.
+3. Clear the entered code (either by using the ""Clear"" OR 
+manually removing the text).
+4. Verify if the field is cleared and can be used again for a new coupon code.",coupon code : SAVE11,"After clearing the coupon code, the input field should be empty.
+The user should be able to enter a new coupon code after clearing.","The coupon code field clears successfully when the user removes the text ,
+After clearing, the field is ready to accept a new coupon code.",PASS,
+TC_091,Verify that a valid coupon code can be applied to the cart.,"1. The user is logged in,
+2. User has added products to the shopping cart.","1.Go to the shopping cart page.
+2. Enter the code in Coupon code field.
+Click ""Apply"" button.",Coupon code: Coupon10,The total price in the cart should be reduced by 10%.,The discount code is not applied.,FAIL,BUG_42
+TC_092,Verify that an expired coupon code cannot be applied during checkout.,"1. The user is logged in,
+2. User has added products to the shopping cart.
+3. An expired coupon code.","1.Go to the shopping cart page.
+2. Enter the expired code in Coupon code field.
+Click ""Apply"" button.",Coupon Code :EXPIRED20,"The coupon code should not be accepted.
+The system should display an error message.
+The total price should remain unchanged.","The ""Coupon code is not valid"" error message is displayed.",PASS,
+TC_093,Verify that an invalid coupon code cannot be applied during checkout.,"1. The user is logged in,
+2. User has added products to the shopping cart.
+3. an invalid coupon code.","1.Go to the shopping cart page.
+2. Enter the invalid code in Coupon code field.
+Click ""Apply"" button.",Coupon Code : INVALID20,"The coupon code should not be accepted.The system should 
+display an error message  ""Invalid coupon code.","The ""Coupon code is not valid"" error message is displayed.",PASS,
+TC_094,Verify that a coupon code for free shipping is applied correctly during checkout.,"1. The user is logged in,
+2. User has added products to the shopping cart.
+3. A coupon code for free shipping.","1. Navigate to the shopping cart page.
+2. Click on the Apply Coupon field.
+3. Enter the coupon code field.
+4. Click on ""Apply"" button.
+5. Observe if the free shipping discount is applied.",Coupon Code : FREESHIP,"The free shipping coupon should be applied successfully.
+The shipping charge should be removed from the total order amount.",The free shipping coupon is not accepted and shipping charge still exist.,FAIL,BUG_43
+TC_095,Verify that the user can go to the product catalog page using go to product page link.,"1. The user is logged in.
+2. The user is on the Cart page","1. Nvaigate to the Shopping Cart page.
+2. Click on the ""go to product page"" link.
+3. Verify that the page redirected to the product catalog.",,The page should redirected to the product catalog page.,The page directed to product list page when the link clicked.,PASS,
+TC_096,"Verify that the user can proceed Check out  with empty ""Instruction for the seller"".","1. The user is logged in.
+2. The user is on the Cart page.
+3. instruction for seller is not mandatory.","1. Navigate to the Cart page having product.
+2. Leave the Instruction for seller box blank.
+3. Click on Proceed to Check out ",,The page should redirected to the Check out page.,The page is redirected to the Check out page.,PASS,

@@ -1,0 +1,71 @@
+,,,,,,,,
+,,,,,,,,
+Project Name: ORGANIC HEALTH FOOD STORE        ,,,,,,,,
+Module Name: Product Search,,,,,,,,
+Created By: Fathimi,,,,,,,,
+Reviewed By: Anas Hassan,,,,,,,,
+Reviewed Date : 11/11/2024,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+TEST CASE ID,"TEST SCENARIO 
+DESCRIPTION",PRECONDITION,TEST STEPS,TEST DATA,EXPECTED RESULT,ACTUAL RESULT,STATUS,BUG ID
+TC_051,"To verify that the user can  product search 
+with a valid product successfully.",1. User is on the product listing page.,"1. Navigate to the search bar and enter the product.
+2. Click the search icon.        
+3.Verify that the search results displays the product and similar products.
+4. Verify that the product image, name, and price are displayed for each result.",product : Orange,"The search should display the correct products, including
+ ""Orange,"" with accurate details.","The search displays Orange and 
+related products like chinese orange",PASS,
+TC_052,"To verify that the user cann't  product search 
+with a non existing product.",1. User is on the product listing page.,"1. Enter a search for non existing product.
+2. Check for related products.",Product : abcdhj,"The page should show an error message ""No results Found"" 
+and should show related products.","No results message is not displayed properly and
+ No suggestions or related products appear.",FAIL,BUG_16
+TC_053,"To verify that product search with
+ an empty query results error message",1. User is on the product listing page.,"1. Navigate to the search bar and leave blank.
+2. Click the search icon.        
+3.Verify that the search results displays products or error message
+",,"The page should show an Error message ""Please enter a product"".","The page shows ""please wait a moment , 
+working on it"" message displayed",FAIL,BUG_17
+TC_054,"Check that entering a partial product name returns 
+relevant results.",1. User is on the product listing page.,"1. Navigate to the search bar and enter partial name of product.
+2. Click the search icon.        
+3.Verify that the search results displays products or error message.
+",Product : pea,"The system should return relevant results, like peanuts , 
+green peas, pear, peach","The page shows list of products related to ""pea"".",PASS,
+TC_055,"To ensure that the search function handles multiple product name
+ and returns relevant results.",1. User is on the product listing page.,"1. Navigate to the search bar.
+2. Enter multiple products name.
+2. Click the search icon.        
+3.Verify that the search results displays products or error message.
+",Product : pear and onion,"The page should shows the products pear and onion
+ and show related products.",The page shows Pear Fruit and related fruits not shows onion .,FAIL,BUG_18
+TC_056,"Verifies that the search bar provides autocomplete suggestions 
+as the user types, helping them find products faster.",1. User is on the product listing page.,"1. Navigate to the search bar.
+2. Begin typing product in the search bar.
+3. Observe the suggestions appearing as you type.",Product : pea,"Autocomplete suggestions such as ""peanut,
+ pear, peach, green pea etc"" should appear.",No autocomplete suggestions appeared as eexpected.,FAIL,BUG_19
+TC_057,"To ensure that special characters do not break the 
+search functionality.",1. User is on the product listing page.,"1. Navigate to the search bar.
+2. Enter product with special characters in the search.
+3. Verify the search results.",Product : rad@#!ish,"The system should either ignore the special 
+characters or handle them correctly.","The page shows ""No Results Found"" error message.",FAIL,BUG_20
+TC_058,"To verify that the search function is case-insensitive and 
+returns the same results regardless of capitalization.",1. User is on the product listing page.,"1. Navigate to the search bar.
+2. Enter product in case-sensitive in the search.
+3. Verify the search results.",product : TOMATO,"The system should return the same products as for ""tomato""","The page shows ""No Results Found"" error message.",FAIL,BUG_21
+TC_059,"Verify that filters can be applied to the search 
+funtion to refine the product listing.","1. User is on the product listing page
+having filterable products.","1. Navigate to the Search bar.
+2. Enter the search product.
+3. Apply the filter.
+4. Observe the results. ","Product : mango 
+Price range : $100.0 - $200.0","The system should display products within the
+ price range of $100.0 to $200.0","The page displayed results of mangoes that 
+were outside the specified price range ",FAIL,BUG_22
+TC_060,"Verify the microphone icon is visible and clickable in the 
+search bar.","1. User is on the product listing page.
+2. The search bar contain microphone icon.","1. open the product home page.
+2. Check the search bar to see if the microphone icon is visible.
+3. Click on the microphone.",,The microphone icon should be visible in the search bar and clickable.,The microphone icon is visible but not accessible.,FAIL,BUG_23

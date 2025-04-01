@@ -1,0 +1,183 @@
+,,,,,,,,
+,,,,,,,,
+Project Name: ORGANIC HEALTH FOOD STORE        ,,,,,,,,
+Module Name: Sign In,,,,,,,,
+Created By: Fathimi,,,,,,,,
+Reviewed By: Anas Hassan,,,,,,,,
+Reviewed Date : 10/11/2024,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+TEST CASE ID,"TEST SCENARIO 
+DESCRIPTION",PRECONDITION,TEST STEPS,TEST DATA,EXPECTED RESULT,ACTUAL RESULT,STATUS,BUG ID
+TC_018,"To verify that the Sign-In page loads correctly 
+with all necessary elements and correctly aligned.",1. User is on the sign in page.,"1. Open the sign in page URL.
+2. Verify the elements : ""Sign In Title"" ,""Username Field"" ,
+""Password Field"" ,""Forgot Password Link"" and ""Sign In Button"". 
+3. Verify that the page loads in less than 5 seconds.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"All elements should be visible and correctly aligned. 
+The page should load with in 5 sec without errors.
+
+","All the elements are visible and correctly aligned, 
+The page is loaded within 5seconds.",PASS,
+TC_019,"Verify that the  placeholder text is displayed correctly
+ in the Username and Password fields.",1. User is on the sign in page.,"1. Navigate to the Sign in page.
+2. Verify Username placeholder text.
+3. Verify Password Placeholder text.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"The Username field should display ""Username"",
+The password should display ""Password"".","The placeholder text is displayed correctly with ""Username"", 
+""Password"" and aligned properly.",PASS,
+TC_020,"To check the Sign-In button is visible, correctly labeled, 
+and aligned properly.",1. User is on the sign in page.,"1. Verify that the Sign-In button is visible on the page.
+2. Check the button label is correct.
+3. Check the button is aligned and centered coreectly.",https://organichealthfoodstore.pythonanywhere.com/products/thank_you/,"The Sign in button should be visible, correctly labeled 
+and aligned properly.","The Sign button is correctly labeled and visible . 
+The Sign in button aligned in the center  with other fields.",PASS,
+TC_021,"Ensure that Password visibility by marking the 
+Show password field and check it works properly.
+",1. User is on the sign in page.,"1. Navigate to the Sign in page.
+2. Enter the password.
+3. Mark the Show password field.
+4. Verify the password is visible.
+5. Unmark the show password field to 
+check the password is hedden.
+",Password : test@123,"The Show Password should be visible and Markable. 
+Marking and Unmarking should show the 
+visibilty of the  password visible and hidden.",The Show Password field is visible and working properly.,PASS,
+TC_022,"Verify that clicking on the input fields
+ focuses them and shows the cursor.",1. User is on the sign in page.,"1. Navigate to Sign in page.
+2. Click on the Username field.
+3. Verify that the cursor appears inside the Username field.
+4. Click on the Password field.
+5. Verify that the cursor appears inside the Username field.",,"The username and Password fields must be focused
+ when clicked and cursor should be inside the fields. ","Clicking on the input fields
+ focuses Username and Password and shows the cursor inside it.",PASS,
+TC_023,"To verify that the Sign Up link is visible, 
+Clickable and redirects 
+to sign up page  correctly with in 5 sec when clicked",1. User is on the sign in page.,"1. Navigate to the Sign in page.
+2. Locate the Sign Up link.
+3. Verify the link text is visible correctly.
+4. Click the link and check the user is redirected to sign up page 
+when clicked.",,"The Sign-Up link should be visible, clickable, 
+and lead to the Sign-Up page when clicked.","The Sign Up link is visible and clickable.Redirected to Sign Up
+ page within 3 sec when clicked.",PASS,
+TC_024,"Ensure that the Forgot Password link is visible, clickable, 
+and redirects correctly.",1. User is on the sign in page.,"1. Navigate to Sign in page.
+2. Locate the forgot password link.
+3. Verify that the link text is visible
+4.Click the link.
+5. Verify that the user is redirected to the password recovery page.",,"The Forgot Password link should be visible, clickable, 
+and lead to the password reset page when clicked.","The Forgot password link is visible, clickable, and
+ redirected to password recovery page.",PASS,
+TC_025,"To verify that a user can successfully sign in with 
+correct credentials (valid Username and Password).","1. The user is on the Sign-In page.
+2. The user must be Registered.","1.Navigate to the Sign-In page.
+2. Enter a valid Registered Username.
+3. Enter the correct password.
+4. Click on the ""Sign in"" button.","Username : Archana
+Password : archana@123","The user should be successfully signed in and 
+redirected to their product page.","The user is successfully signed in and 
+redirected to their product page.",PASS,
+TC_026,Verifies that the user cannot sign in with an invalid Username.,"1. The user is on the Sign-In page.
+2. The user must be Registered.","1.Navigate to the Sign-In page.
+2. Enter a Invalid Username.
+3. Enter the correct password.
+4. Click on the ""Sign in"" button.","Username : Archi
+Password : archana@123","The system should display an error message: 
+""Invalid username or password.""","An error message is displayed ""Invalid Credentials"".",PASS,
+TC_027,Verifies that the user cannot sign in with an invalid Password.,"1. The user is on the Sign-In page.
+2. The user must be Registered.","1.Navigate to the Sign-In page.
+2. Enter a Valid Username.
+3. Enter the Incorrect password.
+4. Click on the ""Sign in"" button.","Username : Archana
+Password : arc@123","The system should display an error message: 
+""Invalid username or password.""","An error message is displayed ""Invalid Credentials"".",PASS,
+TC_028,"Verifies that the user cannot sign in with an invalid credentials 
+(Invalid Username and Invalid Password)","1. The user is on the Sign-In page.
+2. The user must be Registered.","1.Navigate to the Sign-In page.
+2. Enter a Invalid Username.
+3. Enter the Invalid password.
+4. Click on the ""Sign in"" button.","Username : Archi
+Password : arc@123","The system should display an error message: 
+""Invalid username or password.""","An error message is displayed ""Invalid Credentials"".",PASS,
+TC_029,Verify Sign-In with Empty Username Field.,"1. The user is on the Sign-In page.
+","1.Navigate to the Sign-In page.
+2. Leave Username blank.
+3.Enter valid password.
+4. Click on the ""Sign in"" button.","Username : 
+Password : archana@123","The system should display an error message: 
+""This field is Required""","An error message is displayed 
+""Please fill out this field"".",PASS,
+TC_030,Verify Sign-In with Empty Password Field.,"1. The user is on the Sign-In page.
+","1.Navigate to the Sign-In page.
+2. Enter Valid Username.
+3.Leave password field blank.
+4. Click on the ""Sign in"" button.","Username : Fathimi
+Password : ","The system should display an error message: 
+""This field is Required""","An error message is displayed 
+""Please fill out this field"".",PASS,
+TC_031,"To verify that the system does not allow 
+sign-in with empty Required fields. ","1. The user is on the Sign-In page.
+","1.Navigate to the Sign-In page.
+2. Leave Username field blank.
+3.Leave password field blank.
+4. Click on the ""Sign in"" button.","Username : 
+Password : ","The system should display an error message: 
+""This field is Required""","An error message is displayed 
+""Please fill out this field"".",PASS,
+TC_032,"Verifies that the system can handle Username 
+entered in uppercase. ","1. The user is on the Sign-In page.
+2. Assume that user name is 
+not Case Sensitive.
+3. User must be Registered.
+","1.Navigate to the Sign-In page.
+2. Enter Registered Username(uppercase).
+3. Enter the correct password.
+4. Click on the ""Sign in"" button.","Username : ARCHANA
+Password : archana@123","The system should accept the username in uppercase and 
+allow the user to sign in successfully.","The system accepts the user name in uppercase and 
+let the user successfully sign in to the product page.",PASS,
+TC_033,"Check the Sign in functionality when an unregistered 
+user tries to sign in.","1. The user is on the Sign-In page.
+2. The user is not Registered.","1.Navigate to the Sign-In page.
+2. Enter a unregistered Username.
+3. Enter a correct password.
+4. Click on the ""Sign in"" button.","Username : example
+Password : archana@123","The system should display an error message: 
+""Invalid username or password"" 
+or 
+""The user is not registered""","An error message is displayed ""Invalid Credentials"".",PASS,
+TC_034,"Verify the Sign in functionality with Account 
+blocked due to multiple failed attempts.","1. The user is on the Sign-In page.
+2. The user must be Registered.
+3. The account is  blocked after a 
+predefined number of 
+continuous failed login attempts(3).","1.Navigate to Sign in page.
+2. Enter the username.
+3. Enter the wrong password.
+4. Repeat entering wrong password 3 times.
+5. After maximum attempts, 
+tries to sign in with correct password.","Username : example
+WrongPassword : pwd@123(multiple time)
+Password : password@123","After the specified number of failed attempts, 
+the system should lock the account.
+or
+""Your account has been locked please try again later"".","The tuser signed in after the 
+failed attempts without displaying an error message",FAIL,BUG_06
+TC_035,"Verifies that the ""Forgot Password"" functionality 
+can reset user password.","1. The user is on the Sign-In page.
+2. User must have an access to the registered Email.","1.Navigate to the Sign-In page.
+2. Click on the ""Forgot Password"" link.
+3. Enter the registered Email address.
+4. Submit the form and verify inbox for the password recovery mail.
+5. Reset the password.",Email : test@tester.com,"Password reset email should be sent to the user and 
+the user can reset the password.",The system did not send the reset email. ,FAIL,BUG_07
+TC_036,"To verify that the Sign-In page is responsive
+ and displays correctly on different 
+devices(Desktop, mobile devices).","1. The user is on the Sign-In page.
+","1. Open the Sign in page on desktop.
+2. Verify the elements are correctly visible, readable, aligned. 
+3. Open the Sign in page on mobile device.
+4. Verify the elements are correctly visible, readable, aligned. ",,"The Sign In page should be properly adjusted and readable 
+on different devices based on the screen size."," Sign-In page is responsive
+ and displays correctly on different 
+devices(Desktop, mobile devices), properly adjusted based
+ on the screen size.",PASS,

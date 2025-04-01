@@ -1,0 +1,191 @@
+,,,,,,,,
+,,,,,,,,
+Project Name: ORGANIC HEALTH FOOD STORE        ,,,,,,,,
+Module Name: Check Out,,,,,,,,
+Created By: Fathimi,,,,,,,,
+Reviewed By: Anas Hassan,,,,,,,,
+Reviewed Date : 13/11/2024,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+TEST CASE ID,"TEST SCENARIO 
+DESCRIPTION",PRECONDITION,TEST STEPS,TEST DATA,EXPECTED RESULT,ACTUAL RESULT,STATUS,BUG ID
+TC_097,"Verify ""Proceed to Checkout"" button is visible and clickable","1.User is logged in, and there are items in the cart","1. Navigate to the shopping cart page.
+2. Verify ""Proceed to Checkout"" button is displayed.
+3. Click the button.",product 1 : orange(2kg),"The ""Proceed to Checkout"" button is visible and clickable, 
+and the user is taken to the checkout page.","The button is visible, clickable,
+ and redirected to checkout.	",PASS,
+TC_098,"Verify all input fields (shipping, payment, phone numberetc.) 
+are visible and functional","1.User is logged in, and there are items in the cart","1. Navigate to the checkout page.
+2. Verify all required fields (Shipping Address, Payment Method) 
+are visible.
+3. Input valid data in all fields.
+","Shipping Address: ""abcd"", 
+Payment: UPI
+ph : 9087675432","All fields (address, payment, ph, etc.) are visible and editable.","All fields were visible, but the payment option is hidden.",FAIL,BUG_44
+TC_099,Verify the presence of error message for missing required fields	,"1. The user is logged in
+2. User is on the checkout page with incomplete form	","1. Navigate to the checkout page.
+2. Leave the shipping and payment fields empty.
+3. Click "" Checkout"".",,An error message should appear for each missing field.,"An error message ""Please fill out this field""
+ is diplayed.",PASS,
+TC_100,"Verify the ""Order Summary"" section displayed in the Check out 
+page with details","1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the checkout page.
+2. Verify that the ""Order Summary"" section is displayed 
+with product, quantity and price.","Orange 
+2kg
+400","The ""Order Summary"" section displays all items, 
+quantities, and total price accurately.","The order summary section is not 
+displayed on the Check out page.",FAIL,BUG_45
+TC_101,"Verify the ""Check Out"" button is visible and functional","1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the checkout page.
+2. Verify that the ""Check Out"" button is visible.
+3. Click the button.","Orange 
+2kg
+400","The ""Check Out"" button should visible and clickable, confirming the  
+order and redirecting the user to the confirmation page.","The ""Check Out"" button is visible and clickable, 
+confirming the  
+order and redirecting the user to the confirmation page.",PASS,
+TC_102,"Verify the ""Back to Cart"" link functionality","1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the checkout page.
+2. Verify the ""Back to Cart"" link/button","Orange 
+2kg
+400","""Back to cart"" button should be visible. 
+The user is redirected back to the shopping cart page 
+without losing the cart contents.","""Back to Cart "" option is not available.",FAIL,BUG_46
+TC_103,"Verify the ""Continue Shopping"" link functionality","1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the checkout page.
+2. Check for ""Continue Shopping"" link/button","Orange 
+2kg
+400","Continue Shopping button should be there and 
+User is redirected to the product listing page",Continue Shopping option is not available,FAIL,BUG_47
+TC_104,Verify UI color contrast for important buttons,"1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the checkout page.
+2. Check for color contrast for critical buttons ","Carrot
+1kg
+100
+Color contrast : blue",Buttons should have high color contrast to be easily readable and accessible.,"Buttons have high color contrast, easily readable and accessible.",PASS,
+TC_105,"Verify the ""Shipping Address"" field auto-suggest functionality","1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the checkout page.
+2. Start typing an address.
+3. Check for auto- suggestions.","Address: abc
+Auto suggestion: abcde",The shipping address field should suggest possible matches as the user types.,Address suggestions appeared as expected.,PASS,
+TC_106,Verify the successfull meassage after succesfull Checkout,"1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the checkout page.
+2. Enter valid data.
+3. Click ""Check Out"".
+4. Verify for a message.","Carrot
+1kg
+100","A succesfull message should be dispalyed like ""THANK YOU Your Order is placed"".","A succesfull message is dispalyed  ""THANK YOU 
+Your Order is placed"".",PASS,
+TC_107,Verify UI layout for mobile responsiveness,"1. The user is logged in
+2. User is on the checkout page with products.       ","1. Open the checkout page on a mobile device.
+2. Verify all elements (buttons, input fields) 
+are responsive and readable.","Buttons 
+input fields","All UI elements are properly aligned, responsive, and readable on mobile devices.",The layout was broken on mobile; buttons were overlapping.	,FAIL,BUG_48
+TC_108,Verify that  Check out if the user does not provide a shipping address.,"1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the shopping cart page.
+2. Click on ""Proceed to Checkout.""
+3. Skip the shipping address entry or leave it blank.
+4. Enter phone number and valid payment details .
+5. Click ""Check out"".","Address: 
+phone :9876543678
+Payment method : UPI"," An error message should be displayed indicating that the shipping address is required
+ ( ""This field is required"").","The order is not processed, Error message is 
+displayed that This field is required.",PASS,
+TC_109,Verify that Check out if the user does not provide a Phone number.,"1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the shopping cart page.
+2. Click on ""Proceed to Checkout.""
+3. Phone number field leave it blank.
+4. Enter shipping and valid payment details .
+5. Click ""Check out"".","Address: xyz 
+phone :
+Payment method : UPI"," An error message should be displayed indicating that the phone number is required
+ ( ""This field is required"").","The order is not processed, Error message is 
+displayed that This field is required.",PASS,
+TC_110,"Verify that  Check out if the user  provide a Phone number with 
+greater than 10 digits.","1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the shopping cart page.
+2. Click on ""Proceed to Checkout.""
+3. Enter Phone number greater than 10 digits.
+4. Enter shipping and valid payment details .
+5. Click ""Check out"".","Address: xyz 
+phone :12345678910
+Payment method : UPI"," An error message should be displayed indicating that the phone number is not valid
+ ( ""Phone no should have 10 digits"").","The order is not processed, Error message is 
+displayed that, The phone number should have 10 digits.",PASS,
+TC_111,"Verify that  Check out if the user  provide a Phone number with 
+less than 10 digits.","1. The user is logged in
+2. User is on the checkout page with products.       ","1. Navigate to the shopping cart page.
+2. Click on ""Proceed to Checkout.""
+3. Enter Phone number less than 10 digits.
+4. Enter shipping and valid payment details .
+5. Click ""Check out"".","Address: xyz 
+phone :12345678
+Payment method : UPI"," An error message should be displayed indicating that the phone number is not valid
+ ( ""Phone no should have 10 digits"").","The order is not processed, Error message is 
+displayed that, The phone number should have 10 digits.",PASS,
+TC_112,Verify  Check out if the user tries to check out with empty cart.,"1. The user is logged in
+2. User is on the checkout page.       
+3. Cart is empty","1. Navigate to the shopping cart page.
+2. Ensure that the cart is empty.
+3. Click on ""Proceed to Checkout"".
+4. Fill the details.
+5. Click ""Check out"".","Address: 
+phone :9876543678
+Payment method : UPI","The user should see a message indicating that the cart is empty ( ""Your cart is empty."").","No error message is displayed, The order is placed 
+and a successfull message is displayed.",FAIL,BUG_49
+TC_113,"Verify that a user can successfully complete the checkout process 
+with a valid payment method.","1. User is logged in.
+2. The user has added items to the shopping cart.
+3. The user has selected a valid payment method.
+4. Shipping address and phone no is provided.","1. Navigate to the shopping cart page.
+2. Verify that the cart contains the correct products and total price.
+3. Click on ""Proceed to Checkout.""
+4. Enter shipping details.
+5. Select the payment method.
+6. Enter payment details.
+7. Click on ""Check Out.""
+8. Wait for the confirmation page to load.","Address: 
+phone :9876543678
+Payment method : UPI","The user Should complete the checkout process without errors.
+Successfull message should be displayed.","The Order is not processed.
+ Order confirmation page fails to load. ",FAIL,BUG_50
+TC_114,"Verify the checkout process 
+with a Invalid payment method.","1. User is logged in.
+2. The user has added items to the shopping cart.
+3. The user has selected a Invalid payment details.
+4. Shipping address and phone no is provided.","1. Navigate to the shopping cart page.
+2. Verify that the cart contains the correct products and total price.
+3. Click on ""Proceed to Checkout.""
+4. Enter shipping details.
+5. Select the payment method enter invalid details..
+6. Enter payment details.
+7. Click on ""Check Out.""
+8. Wait for the confirmation page to load.","Address: 
+phone :9876543678
+Payment method : credit card",". An error message should be displayed indicating that the 
+payment method is invalid","The Order is not processed.
+ Order confirmation page fails to load. ",PASS,
+TC_115,Test the checkout process with an invalid or incomplete shipping address.,"1. User is logged in.
+2. The user has added items to the shopping cart.
+3. The user has selected a Valid payment method.
+4. Incomplete Shipping address is provided
+(Missing postal code).","1. Go to the shopping cart page.
+2. Click ""Proceed to Checkout"".
+3. Enter valid payment details.
+4. Enter invalid shipping address.
+5. Click ""Check Out"".","Address: fathimi manzil
+phone :9876543678
+Payment method : credit card","An error message should display ""Please enter a valid shipping address."" ","No error message is displayed, The order is placed 
+and a successfull message is displayed.",FAIL,BUG_51
+TC_116,"Verify the checkout process with missing 
+ payment information.","1. User is logged in.
+2. The user has added items to the shopping cart.","1. Go to the shopping cart page.
+2. Click ""Proceed to Checkout"".
+3. Skip Payment method.
+4. Enter Valid shipping address.
+5. Click ""Check Out"".","Address: fathimi manzil
+phone :9876543678
+Payment method : ","An error message should be displayed  ""Plesase complete your payment information."" ","No error message is displayed, The order is placed 
+and a successfull message is displayed.",FAIL,BUG_52
